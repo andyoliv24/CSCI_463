@@ -178,49 +178,6 @@ Parameters: none
 Returns: nothing
 ***************************************************************/
 void memory::dump() const{
-	/*string reg = "00000000:";
-	int count = 10;
-	int count2 = 0;
-	//prints register numbers
-	for(unsigned u = 0; u < size/16; u++){
-		if(u%16 && u != 0){
-			reg.replace(6,7,to_string(count));
-			reg.append(":");
-			cout << reg;
-			count += 10;	
-		}
-		else if (u == 0){
-			cout << reg;
-		}
-		for(int j = count2; j < 16 + count2 ; j++){
-			//if used for spacing formatting
-			if(j % 8 == 0){
-				cout << " ";
-			}
-			//checks if address is 0xa5
-			if(mem[j] == 0xa5){
-				cout << " a5";
-			}
-			else{
-				cout << " " << hex8((int)mem[j]);
-			}
-		}
-		cout << " *";
-		for(int k = count2; k < 16 + count2; k++){
-			//checks if address is 0xa5 and if it is printable
-			if(mem[k] == 0xa5 || !isprint(mem[k])){
-				cout << ".";
-			}
-			else{
-				//prints address content
-				cout << mem[k];
-			}
-		}
-		cout << "*";		
-		cout << endl;
-		count2+=16;
-	}
-	cout << endl;*/
 	char ascii[17];
 	ascii [16] = 0;
 	for(uint32_t i=0; i<size; i++){
